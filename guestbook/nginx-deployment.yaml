@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - image: nginx:1.23.2-alpine
-        name: guestbook-ui
+        name: gateway-nginx
         ports:
         - containerPort: 80
