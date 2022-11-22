@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gateway-nginx
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: gateway-nginx
+  template:
+    metadata:
+      labels:
+      app: gateway-nginx
+    spec:
+      containers:
+      - image: nginx:1.23.2-alpine
+        name: guestbook-ui
+        ports:
+        - containerPort: 80
