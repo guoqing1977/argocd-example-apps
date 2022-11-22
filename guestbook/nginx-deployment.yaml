@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: gateway-nginx
 spec:
-  replicas: 3
+  replicas: 2
   revisionHistoryLimit: 3
   selector:
     matchLabels:
@@ -14,7 +14,7 @@ spec:
         app: gateway-nginx
     spec:
       containers:
-      - image: nginx:1.23.2-alpine
+      - image: nginx:latest
         name: gateway-nginx
         ports:
         - containerPort: 80
