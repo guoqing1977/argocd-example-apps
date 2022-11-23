@@ -20,8 +20,6 @@ spec:
             - containerPort: 80
       volumes:
         - name: example-configmap
-          configMap:
-            name: example-configmap-1
+          configMapName: example-configmap-1
         - name: example-secret
-          secret:
-            name: example-secret-1
+          secretName: example-secret-1
