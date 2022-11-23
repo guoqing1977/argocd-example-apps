@@ -2,11 +2,11 @@ namePrefix: kustomize-
 configMapGenerator:
   - name: example-configmap-1
     files:
-      - password
+      - password.txt
 secretGenerator:
   - name: example-secret-1
     files:
-      - password
+      - password.txt
 resources:
   - guestbook-ui-deployment.yaml
   - guestbook-ui-svc.yaml
